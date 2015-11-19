@@ -62,6 +62,7 @@
 
             <table border="1" class="table table-bordered">
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Description</th>
                     <th>Type</th>
@@ -69,6 +70,7 @@
                     <th>Action</th>
                 </tr>
                 <tr ng-repeat="transaction in transactions" ng-class="{'alert-danger': transaction.type == 'debit', 'alert-success': transaction.type == 'credit'}">
+                    <td>{{transaction.id}}</td>
                     <td>{{transaction.name}}</td>
                     <td>{{transaction.description}}</td>
                     <td>{{transaction.type}}</td>
@@ -76,7 +78,7 @@
                     <td><button ng-click="removeTransaction(transaction)">Remove</button></td>
                 </tr>
             </table>
-            <div class="alert" ng-class="{'alert-danger': total < 0, 'alert-success': total > 0, 'alert-info': total === 0}">{{total}}</div>
+            <div class="alert" ng-class="{'alert-danger': total < 0, 'alert-success': total > 0, 'alert-info': total === 0}">Net total: {{total}}</div>
 
 
         </div>
