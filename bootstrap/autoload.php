@@ -16,6 +16,8 @@ define('LARAVEL_START', microtime(true));
 
 require __DIR__.'/../vendor/autoload.php';
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Include The Compiled Class File
@@ -26,6 +28,8 @@ require __DIR__.'/../vendor/autoload.php';
 | by a request. The Artisan "optimize" is used to create this file.
 |
 */
+
+
 
 $compiledPath = __DIR__.'/cache/compiled.php';
 
